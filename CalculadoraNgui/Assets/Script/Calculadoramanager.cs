@@ -9,9 +9,8 @@ public class Calculadoramanager : MonoBehaviour
     [SerializeField] private GameObject visor;
     private int Acumulador;
     private readonly int Resultado;
-
-
-	// Use this for initialization
+    // Use this for initialization
+    private bool estaSomando;
 
 	void Start ()
 	{
@@ -38,6 +37,7 @@ public class Calculadoramanager : MonoBehaviour
 
     public void Soma()
     {
+        estaSomando = true;
         var antigovisor = visor.transform.GetChild(1).GetComponent<UILabel>().text;
         Acumulador = Convert.ToInt32(antigovisor) + Acumulador;
         Clear();
@@ -55,6 +55,15 @@ public class Calculadoramanager : MonoBehaviour
 
     public void Igual()
     {
+        //Ou seja, o ultimo botao foi a soma
+        if (estaSomando = true)
+        {
+            Soma();
+            estaSomando = false;
+            ///Após ser colocado como somado,
+            /// ele são do modo estaSomando
+        }
+
         visor.transform.GetChild(1).GetComponent<UILabel>().text = Acumulador.ToString();
 
     }
