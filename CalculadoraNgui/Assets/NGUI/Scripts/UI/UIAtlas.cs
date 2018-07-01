@@ -55,7 +55,7 @@ public class UIAtlas : MonoBehaviour
 	[HideInInspector][SerializeField] UIAtlas mReplacement;
 
 	// Legacy functionality -- do not use
-	[HideInInspector][SerializeField] Coordinates mCoordinates = Coordinates.Pixels;
+	[HideInInspector][SerializeField] readonly Coordinates mCoordinates = Coordinates.Pixels;
 	[HideInInspector][SerializeField] List<Sprite> sprites = new List<Sprite>();
 
 	// Whether the atlas is using a pre-multiplied alpha material. -1 = not checked. 0 = no. 1 = yes.

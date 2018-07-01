@@ -134,7 +134,7 @@ public class PropertyReference
 		return false;
 	}
 
-	static int s_Hash = "PropertyBinding".GetHashCode();
+	static readonly int s_Hash = "PropertyBinding".GetHashCode();
 
 	/// <summary>
 	/// Used in equality operators.

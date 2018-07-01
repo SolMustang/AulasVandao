@@ -20,7 +20,7 @@ public class UIToggledComponents : MonoBehaviour
 
 	// Deprecated functionality
 	[HideInInspector][SerializeField] MonoBehaviour target;
-	[HideInInspector][SerializeField] bool inverse = false;
+	[HideInInspector][SerializeField] readonly bool inverse = false;
 
 	void Awake ()
 	{

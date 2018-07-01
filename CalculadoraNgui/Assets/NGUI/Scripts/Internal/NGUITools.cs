@@ -1716,7 +1716,7 @@ static public class NGUITools
 	}
 
 	// Temporary variable to avoid GC allocation
-	static Vector3[] mSides = new Vector3[4];
+	static readonly Vector3[] mSides = new Vector3[4];
 
 	/// <summary>
 	/// Get sides relative to the specified camera. The order is left, top, right, bottom.

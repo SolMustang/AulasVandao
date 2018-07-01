@@ -21,7 +21,7 @@ public class UI2DSprite : UIBasicSprite
 	[HideInInspector][SerializeField] Shader mShader;
 	[HideInInspector][SerializeField] Vector4 mBorder = Vector4.zero;
 	[HideInInspector][SerializeField] bool mFixedAspect = false;
-	[HideInInspector][SerializeField] float mPixelSize = 1f;
+	[HideInInspector][SerializeField] readonly float mPixelSize = 1f;
 
 	/// <summary>
 	/// To be used with animations.

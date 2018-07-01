@@ -1897,7 +1897,7 @@ static public class NGUIText
 		mColors.Clear();
 	}
 
-	static float[] mBoldOffset = new float[]
+	static readonly float[] mBoldOffset = new float[]
 	{
 		-0.25f, 0f, 0.25f, 0f,
 		0f, -0.25f, 0f, 0.25f

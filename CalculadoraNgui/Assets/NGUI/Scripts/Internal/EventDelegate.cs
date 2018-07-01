@@ -294,7 +294,7 @@ public class EventDelegate
 		return false;
 	}
 
-	static int s_Hash = "EventDelegate".GetHashCode();
+	static readonly int s_Hash = "EventDelegate".GetHashCode();
 
 	/// <summary>
 	/// Used in equality operators.

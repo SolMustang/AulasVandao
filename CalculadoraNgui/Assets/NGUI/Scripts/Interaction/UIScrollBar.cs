@@ -25,7 +25,7 @@ public class UIScrollBar : UISlider
 	[HideInInspector][SerializeField] protected float mSize = 1f;
 
 	// Deprecated functionality
-	[HideInInspector][SerializeField] float mScroll = 0f;
+	[HideInInspector][SerializeField] readonly float mScroll = 0f;
 	[HideInInspector][SerializeField] Direction mDir = Direction.Upgraded;
 
 	[System.Obsolete("Use 'value' instead")]

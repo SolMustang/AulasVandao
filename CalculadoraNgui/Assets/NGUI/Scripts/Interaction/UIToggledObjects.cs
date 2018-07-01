@@ -18,7 +18,7 @@ public class UIToggledObjects : MonoBehaviour
 	public List<GameObject> deactivate;
 
 	[HideInInspector][SerializeField] GameObject target;
-	[HideInInspector][SerializeField] bool inverse = false;
+	[HideInInspector][SerializeField] readonly bool inverse = false;
 
 	void Awake ()
 	{

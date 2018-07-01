@@ -30,7 +30,7 @@ public class InvGameItem
 	}
 
 	// ID of the base item used to create this game item
-	[SerializeField] int mBaseItemID = 0;
+	[SerializeField] readonly int mBaseItemID = 0;
 
 	/// <summary>
 	/// Item quality -- applies a penalty or bonus to all base stats.

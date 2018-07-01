@@ -207,7 +207,7 @@ public class UIPanel : UIRect
 	int mLayer = -1;
 
 	// Values used for visibility checks
-	static float[] mTemp = new float[4];
+	static readonly float[] mTemp = new float[4];
 	Vector2 mMin = Vector2.zero;
 	Vector2 mMax = Vector2.zero;
 #if !UNITY_5_5_OR_NEWER
@@ -627,7 +627,7 @@ public class UIPanel : UIRect
 	}
 
 	// Temporary variable to avoid GC allocation
-	static Vector3[] mCorners = new Vector3[4];
+	static readonly Vector3[] mCorners = new Vector3[4];
 
 	/// <summary>
 	/// Local-space corners of the panel's clipping rectangle. The order is bottom-left, top-left, top-right, bottom-right.

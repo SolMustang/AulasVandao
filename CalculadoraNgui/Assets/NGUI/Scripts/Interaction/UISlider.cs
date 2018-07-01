@@ -25,7 +25,7 @@ public class UISlider : UIProgressBar
 	[HideInInspector][SerializeField] Transform foreground = null;
 
 	// Deprecated functionality
-	[HideInInspector][SerializeField] float rawValue = 1f; // Use 'value'
+	[HideInInspector][SerializeField] readonly float rawValue = 1f; // Use 'value'
 	[HideInInspector][SerializeField] Direction direction = Direction.Upgraded; // Use 'fillDirection'
 	[HideInInspector][SerializeField] protected bool mInverted = false;
 
