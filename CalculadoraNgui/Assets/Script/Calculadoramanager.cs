@@ -7,19 +7,38 @@ public class Calculadoramanager : MonoBehaviour
 {
 
     [SerializeField] private GameObject visor;
+    [SerializeField] private GameObject visor_1;
     private int Acumulador;
     private readonly int Resultado;
-    // Use this for initialization
     private bool estaSomando;
+    
+    
 
-	void Start ()
+
+    // Use this for initialization
+   
+    
+
+
+
+
+
+
+
+    void Start ()
 	{
 
 	    visor.transform.GetChild(1).GetComponent<UILabel>().text = "0";
-	    Acumulador = 0;
-	}
+	    visor_1.transform.GetChild(1).GetComponent<UILabel>().text = "";
+        Acumulador = 0;
+
+        
+    }
 
     // Function Caldulator
+
+
+        
 
     public void Clear()
     {
@@ -31,6 +50,7 @@ public class Calculadoramanager : MonoBehaviour
     public void Clearall()
     {
         visor.transform.GetChild(1).GetComponent<UILabel>().text = "0";
+        visor_1.transform.GetChild(1).GetComponent<UILabel>().text = "";
         Acumulador = 0;
 
     }
@@ -42,6 +62,12 @@ public class Calculadoramanager : MonoBehaviour
         Acumulador = Convert.ToInt32(antigovisor) + Acumulador;
         Clear();
 
+
+
+        visor_1.transform.GetChild(1).GetComponent<UILabel>().text = "V" + antigovisor + "A" + Acumulador;
+        
+
+
     }
 
     public void Subtrair()
@@ -50,6 +76,8 @@ public class Calculadoramanager : MonoBehaviour
         var antigovisor = visor.transform.GetChild(1).GetComponent<UILabel>().text;
         Acumulador = Convert.ToInt32(antigovisor) - Acumulador;
         Clear();
+
+        visor_1.transform.GetChild(1).GetComponent<UILabel>().text = "V" + antigovisor + "A" + Acumulador;
     }
 
 
